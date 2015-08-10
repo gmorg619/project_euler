@@ -1,4 +1,4 @@
-def evenly_divisible(num)
+def evenly_divisible?(num)
   boolean = true
   num_arr = (11..20).to_a #Changed to 11 to increase speed of program 1-10 are covered in 11-20
 
@@ -17,7 +17,7 @@ end
 # the smallest num that can be divided from one to twenty must be at least this big
 num = 2520
 
-until evenly_divisible(num) == true do
+until evenly_divisible?(num) == true do
   num +=20 # must be divible by 20
 end
 
