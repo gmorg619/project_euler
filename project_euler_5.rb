@@ -1,3 +1,12 @@
+# ------------------------------------------------------------------------------
+# Problem 5
+# 2520 is the smallest number that can be divided by each of the numbers from 1
+# to 10 without any remainder.
+#
+# What is the smallest positive number that is evenly divisible by all of the
+# numbers from 1 to 20?
+# ------------------------------------------------------------------------------
+
 def evenly_divisible?(num)
   boolean = true
   num_arr = (11..20).to_a #Changed to 11 to increase speed of program 1-10 are covered in 11-20
@@ -22,3 +31,7 @@ until evenly_divisible?(num) == true do
 end
 
 puts num
+
+# ------------------------------------------------------------------------------
+# Answer: 232792560
+# ------------------------------------------------------------------------------

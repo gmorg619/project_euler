@@ -1,3 +1,11 @@
+# ------------------------------------------------------------------------------
+# Problem 4
+# A palindromic number reads the same both ways. The largest palindrome made from
+# the product of two 2-digit numbers is 9009 = 91 × 99.
+#
+# Find the largest palindrome made from the product of two 3-digit numbers.
+# ------------------------------------------------------------------------------
+
 # Method to test if an integer is a palendrome
 def palindrome_test(int)
   if int == reverse(int)
@@ -33,3 +41,7 @@ num_arr.each do |num1|
 end
 
 puts max_palindrome
+
+# ------------------------------------------------------------------------------
+# Answer: 906609
+# ------------------------------------------------------------------------------
