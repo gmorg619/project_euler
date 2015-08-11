@@ -6,30 +6,34 @@
 # What is the largest prime factor of the number 600851475143?
 # ------------------------------------------------------------------------------
 
-def largest_prime_factor(number)
-  answer = number
-  if number%2 == 0
-    number /=2
-    return largest_prime_factor(number)
-  elsif number%3 == 0
-    number /=3
-    return largest_prime_factor(number)
-  # elsif number%5 == 0
-  #   return largest_prime_factor(number/5)
-  # elsif number%7 == 0
-  #   return largest_prime_factor(number/7)
-  # elsif number%11 == 0
-  #   return largest_prime_factor(number/11)
-  # elsif number%13 == 0
-  #   return largest_prime_factor(number/13)
-  # else
-  #   return answer
-  end
+num = 600851475143
+max_prime = 0
+i = 2
 
+while i <= num
+  if num % i == 0
+    num /=i
+    if i > max_prime
+      max_prime = i
+    end
+  end
+  i +=1
 end
 
-puts largest_prime_factor(600851475143)
+puts max_prime
+
+# ************************ #
+# USING RUBY PRIME LIBRARY #
+# ************************ #
+
+require 'prime'
+
+num = 600851475143
+
+prime_factors = num.prime_division
+
+puts prime_factors[-1][0]
 
 # ------------------------------------------------------------------------------
-# Answer:
+# Answer: 6857
 # ------------------------------------------------------------------------------
