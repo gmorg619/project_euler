@@ -13,24 +13,17 @@
 # natural numbers and the square of the sum.
 # ------------------------------------------------------------------------------
 
-def sum_of_squares(array)
-  sum = 0
-  array.each do |num|
-    sum += (num*num)
-  end
-  return sum
+sum = 0
+square = 0
+num_arr = (1..100)
+
+num_arr.each do |num|
+  sum += (num*num)
+  square +=num
 end
 
-def square_of_sums(array)
-  square = 0
-  array.each do |num|
-    square +=num
-  end
-  return square*square
-end
-
-num_arr = (1..100).to_a
-answer = square_of_sums(num_arr) - sum_of_squares(num_arr)
+square *= square
+answer = square - sum
 
 puts answer
 
