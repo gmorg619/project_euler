@@ -9,7 +9,7 @@
 
 def evenly_divisible?(num)
   boolean = true
-  num_arr = (11..20).to_a #Changed to 11 to increase speed of program 1-10 are covered in 11-20
+  num_arr = (11..20) #Changed to 11 to increase speed of program 1-10 are covered in 11-20
 
   num_arr.each do |value|
     if num%value == 0

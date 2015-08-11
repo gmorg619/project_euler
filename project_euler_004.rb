@@ -24,7 +24,7 @@ def reverse(int)
   return reverse_int.to_i
 end
 
-num_arr = (100..999).to_a
+num_arr = (100..999)
 max_palindrome = 0
 
 # Nested loop to iterate through every intger in num_arr, test if product is a
