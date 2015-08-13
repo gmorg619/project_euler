@@ -52,43 +52,33 @@ array = [[8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8
 [20, 73, 35, 29, 78, 31, 90, 1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 5, 54],
 [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]]
 
-i = 0
-j = 0
-max_product = 0
 
-while i < array.length
-  while j < array[i].length
+product_arr = []
+
+for i in 0..array.length - 1
+  for j in 0..array[i].length - 1
 
     if j < array[i].length - 3
       right = array[i][j] * array[i][j+1] * array[i][j+2] * array[i][j+3]
-      if right > max_product
-        max_product = right
-      end
+      product_arr << right
     end
-    if i < array.length - 3
-      down  = array[i][j] * array[i+1][j] * array[i+2][j] * array[i+3][j]
-      if down > max_product
-        max_product = down
-      end
+    if i > 3
+      down  = array[i][j] * array[i-1][j] * array[i-2][j] * array[i-3][j]
+      product_arr << down
     end
     if j < array[i].length - 3 && i < array.length - 3
       diagonal_down = array[i][j] * array[i+1][j+1] * array[i+2][j+2] * array[i+3][j+3]
-      if diagonal_down > max_product
-        max_product = diagonal_down
-      end
+      product_arr << diagonal_down
     end
     if  j > 3  && i < array.length - 3
-      diagonal_up = array[i][j] * array[i-1][j-1] * array[i-2][j-2] * array[i-3][j-3]
-      if diagonal_up > max_product
-        max_product = diagonal_up
-      end
+      diagonal_up = array[i][j] * array[i+1][j-1] * array[i+2][j-2] * array[i+3][j-3]
+      product_arr << diagonal_up
     end
-    j +=1
+
   end
-  i +=1
 end
 
-puts max_product
+puts product_arr.max
 
 
 # ------------------------------------------------------------------------------
