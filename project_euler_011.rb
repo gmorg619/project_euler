@@ -59,25 +59,30 @@ max_product = 0
 while i < array.length
   while j < array[i].length
 
-    if j < array[i].length - 4
+    if j < array[i].length - 3
       right = array[i][j] * array[i][j+1] * array[i][j+2] * array[i][j+3]
       if right > max_product
         max_product = right
       end
     end
-    if i < array.length - 4
+    if i < array.length - 3
       down  = array[i][j] * array[i+1][j] * array[i+2][j] * array[i+3][j]
       if down > max_product
         max_product = down
       end
     end
-    if j < array[i].length - 4 && i < array.length - 4
-      diagonal = array[i][j] * array[i+1][j+1] * array[i+2][j+2] * array[i+3][j+3]
-      if diagonal > max_product
-        max_product = diagonal
+    if j < array[i].length - 3 && i < array.length - 3
+      diagonal_down = array[i][j] * array[i+1][j+1] * array[i+2][j+2] * array[i+3][j+3]
+      if diagonal_down > max_product
+        max_product = diagonal_down
       end
     end
-    
+    if  j > 3  && i < array.length - 3
+      diagonal_up = array[i][j] * array[i-1][j-1] * array[i-2][j-2] * array[i-3][j-3]
+      if diagonal_up > max_product
+        max_product = diagonal_up
+      end
+    end
     j +=1
   end
   i +=1

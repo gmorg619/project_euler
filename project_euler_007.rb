@@ -7,18 +7,35 @@
 # What is the 10,001st prime number?
 # ------------------------------------------------------------------------------
 
-require 'prime'
+def is_prime?(number)
+    for i in (2..number)
+        if number % i == 0 && i != number
+            return false
+        end
+    end
+    return true;
+end
+
 num_arr = []
 num = 0
 
 until num_arr.length == 10001 do
-  if Prime.prime?(num)
+  if is_prime?(num)
     num_arr << num
   end
   num +=1
 end
 
 puts num_arr[-1]
+
+# ************************ #
+# USING RUBY PRIME LIBRARY #
+# ************************ #
+
+require 'prime'
+
+prime_arr = Prime.first 10001
+puts prime_arr[-1]
 
 
 # ------------------------------------------------------------------------------
