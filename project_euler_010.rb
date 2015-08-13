@@ -5,8 +5,11 @@
 #
 # Find the sum of all the primes below two million.
 # ------------------------------------------------------------------------------
-require 'prime'
-def is_prime(number)
+
+# WARNING!!! THIS CODE WORKS BUT WILL TAKE A SERIOUSLY FREAKIN LONG TIME TO RUN!
+# My best estimate is that it will take somewhere around 4 hrs to finish.
+
+def is_prime?(number)
     for i in (2..number)
         if number % i == 0 && i != number
             return false
@@ -16,13 +19,11 @@ def is_prime(number)
 end
 
 sum = 0
-j = 1
 
-while j < 2000000 do
-  if is_prime(j)
-    sum += j
+for i in 1..200000
+  if is_prime?(i)
+    sum += i
   end
-  j +=1
 end
 
 puts sum
@@ -31,15 +32,18 @@ puts sum
 # USING RUBY PRIME LIBRARY #
 # ************************ #
 
-# require 'prime'
-# sum = 0
-# i = 0
-#
-# Prime.each(2000000) do |prime|
-#   sum += prime
-# end
-#
-# puts sum
+# This code is way faster (3 seconds), but is kind of cheating
+
+require 'prime'
+
+sum = 0
+i = 0
+
+Prime.each(2000000) do |prime|
+  sum += prime
+end
+
+puts sum
 
 # ------------------------------------------------------------------------------
 # Answer: 142913828922

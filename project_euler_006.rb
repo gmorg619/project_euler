@@ -23,6 +23,10 @@ num_arr.each do |num|
   square +=num
 end
 
+# Practicing .inject and .reduce methods
+# sum = num_arr.inject{|sum, n| sum + n*n }
+# square = num_arr.reduce(:+)
+
 square *= square
 answer = square - sum
 

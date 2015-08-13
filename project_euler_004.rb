@@ -27,6 +27,7 @@ end
 
 num_arr = (100..999)
 max_palindrome = 0
+# palindrome_arr = [] ---> Addition way to get solution
 
 # Nested loop to iterate through every intger in num_arr, test if product is a
 # palindrome and test if it is the largest palindrome so far.
@@ -34,6 +35,7 @@ num_arr.each do |num1|
   num_arr.each do |num2|
     test_num = num1*num2
     if palindrome_test(test_num)
+      # palindrome_arr << test_num ---> Addition way to get solution
       if test_num > max_palindrome
         max_palindrome = test_num
       end
@@ -42,6 +44,7 @@ num_arr.each do |num1|
 end
 
 puts max_palindrome
+# puts palindrome_arr.max ---> Addition way to get solution
 
 # ------------------------------------------------------------------------------
 # Answer: 906609
