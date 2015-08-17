@@ -13,6 +13,8 @@ a**a + b**b - c**c = 0
   a  +   b  +   c  = 1000
   a  <   b  <   c
 
+  # Use linear algebra? research how to do in coding
+
 
 # ------------------------------------------------------------------------------
 # Answer:
