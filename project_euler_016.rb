@@ -6,6 +6,15 @@
 # What is the sum of the digits of the number 2^1000?
 # ------------------------------------------------------------------------------
 
+# Create an array where each
+number = (2**1000).to_s
+new_number = 0
+
+for x in 0..number.length - 1
+ new_number += number[x].to_i
+end
+
+puts new_number
 
 # ------------------------------------------------------------------------------
 # Answer:
