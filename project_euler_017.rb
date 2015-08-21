@@ -12,8 +12,15 @@
 # letters. The use of "and" when writing out numbers is in compliance with
 # British usage.
 # ------------------------------------------------------------------------------
-sup.
 
+array = {1 => "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+  "eleven", "twelve", "thirteen", "fourteen" "fifteen" "teen" "twenty" "thirty" "forty" "fifty" "ty"
+}
+"hundred and"
+
+for x in 1..1000
+
+end
 # ------------------------------------------------------------------------------
 # Answer:
 # ------------------------------------------------------------------------------
