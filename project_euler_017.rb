@@ -12,7 +12,7 @@
 # letters. The use of "and" when writing out numbers is in compliance with
 # British usage.
 # ------------------------------------------------------------------------------
-sup
+sup.
 
 # ------------------------------------------------------------------------------
 # Answer:
