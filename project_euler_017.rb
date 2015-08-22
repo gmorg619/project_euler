@@ -16,7 +16,7 @@
 array = {1 => "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
   "eleven", "twelve", "thirteen", "fourteen" "fifteen" "teen" "twenty" "thirty" "forty" "fifty" "ty"
 }
-"hundred and"
+"hundred and" g
 
 for x in 1..1000
 
